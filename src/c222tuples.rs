@@ -19,7 +19,11 @@ impl fmt::Display for Matrix {
     }
 }
 
-fn main() {
+fn transpose(matrix: Matrix) -> Matrix {
+    Matrix(matrix.0, matrix.2, matrix.1, matrix.3)
+}
+
+pub fn main() {
     // A tuple with a bunch of different types
     let long_tuple = (1u8, 2u16, 3u32, 4u64,
                       -1i8, -2i16, -3i32, -4i64,
@@ -58,4 +62,7 @@ fn main() {
 
     let matrix = Matrix(1.1, 1.2, 2.1, 2.2);
     println!("{:?}", matrix);
+
+    let transposed_matrix = transpose(matrix);
+    println!("{}", transposed_matrix);
 }
