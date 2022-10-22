@@ -13,6 +13,7 @@ struct Rectangle {
 }
 
 impl Rectangle {
+    /// Calculates the area of the rectangle
     fn area(&self) -> f32 {
         let Rectangle {
             top_left: Point { x: x1, y: y1 },
@@ -20,6 +21,17 @@ impl Rectangle {
         } = self;
 
         (x2 - x1) * (y2 - y1)
+    }
+}
+
+/// Creates a square Rectangle at a specified point, with a specified width and height
+fn square(point: Point, side_length: f32) -> Rectangle {
+    Rectangle {
+        bottom_right: Point {
+            x: &point.x + &side_length,
+            y: &point.y + &side_length,
+        },
+        top_left: point,
     }
 }
 
@@ -38,4 +50,27 @@ pub fn main() {
     let area = rect.area();
 
     println!("{}", area);
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::ch3custom_types::{Point, Rectangle};
+
+    #[test]
+    fn area() {
+        let rect = Rectangle {
+            top_left: Point {
+                x: 0 as f32,
+                y: 0 as f32,
+            },
+            bottom_right: Point {
+                x: 10 as f32,
+                y: 10 as f32,
+            },
+        };
+
+        let area = rect.area();
+
+        assert_eq!(area, 100f32);
+    }
 }

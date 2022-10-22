@@ -7,3 +7,4 @@ use ch3custom_types::main as customtypesmain;
 fn main() {
     customtypesmain()
 }
+
