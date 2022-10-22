@@ -1,8 +1,9 @@
 mod c123formatting;
 mod c222tuples;
+mod ch3custom_types;
 
-use c222tuples::main as tupleMain;
+use ch3custom_types::main as customtypesmain;
 
 fn main() {
-    tupleMain()
+    customtypesmain()
 }
