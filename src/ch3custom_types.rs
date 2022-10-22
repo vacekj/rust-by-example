@@ -54,7 +54,7 @@ pub fn main() {
 
 #[cfg(test)]
 mod tests {
-    use crate::ch3custom_types::{Point, Rectangle};
+    use crate::ch3custom_types::{Point, Rectangle, square};
 
     #[test]
     fn area() {
@@ -72,5 +72,16 @@ mod tests {
         let area = rect.area();
 
         assert_eq!(area, 100f32);
+    }
+
+    #[test]
+    fn square_test() {
+        let point = Point { x: 10f32, y: 10f32 };
+        let sq = square(point, 10f32);
+
+        assert_eq!(sq.bottom_right.x, 20f32);
+        assert_eq!(sq.bottom_right.y, 20f32);
+        assert_eq!(sq.top_left.x, 10f32);
+        assert_eq!(sq.top_left.x, 10f32);
     }
 }
