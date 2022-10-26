@@ -13,5 +13,14 @@ pub fn main() {
 
     // Error! There are limitations in conversion rules.
     // A float cannot be directly converted to a char.
-    let character = decimal as char;
+    // let character = decimal as char;
+
+    println!("casting: {} -> {} -> {}", decimal, integer, character);
+
+    // when casting any value to an unsigned type, T,
+    // T::MAX + 1 is added or subtracted until the value
+    // fits into the new type
+
+    // 1000 already fits in a u16
+    println!("1000 as a u16 is: {}", 1000 as u16);
 }

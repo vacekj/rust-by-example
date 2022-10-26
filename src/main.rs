@@ -10,7 +10,7 @@ mod ch44_freezing;
 mod ch4_variable_bindings;
 mod ch51_casting;
 
-use ch44_freezing::main as realMain;
+use ch51_casting::main as realMain;
 
 fn main() {
     realMain();
