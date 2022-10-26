@@ -10,4 +10,8 @@ pub fn main() {
     // Explicit conversion
     let integer = decimal as u8;
     let character = integer as char;
+
+    // Error! There are limitations in conversion rules.
+    // A float cannot be directly converted to a char.
+    let character = decimal as char;
 }
