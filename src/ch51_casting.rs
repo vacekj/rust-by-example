@@ -31,4 +31,7 @@ pub fn main() {
 
     // -1 + 256 = 255
     println!(" -1 as a u8 is : {}", (-1i8) as u8);
+
+    // For positive numbers, this is the same as the modulus
+    println!("1000 mod 256 is : {}", 1000 % 256);
 }
