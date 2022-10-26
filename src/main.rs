@@ -6,8 +6,9 @@ mod ch3custom_types;
 mod ch41_mutability;
 mod ch42_scope_and_shadowing;
 mod ch4_variable_bindings;
+mod ch43_declare_first;
 
-use ch42_scope_and_shadowing::main as realMain;
+use ch43_declare_first::main as realMain;
 
 fn main() {
     realMain();
