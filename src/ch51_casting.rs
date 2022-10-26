@@ -28,4 +28,7 @@ pub fn main() {
     // Under the hood, the first 8 least significant bits (LSB) are kept,
     // while the rest towards the most significant bit (MSB) get truncated.
     println!("1000 as a u8 is: {}", 1000 as u8);
+
+    // -1 + 256 = 255
+    println!(" -1 as a u8 is : {}", (-1i8) as u8);
 }
