@@ -23,4 +23,9 @@ pub fn main() {
 
     // 1000 already fits in a u16
     println!("1000 as a u16 is: {}", 1000 as u16);
+
+    // 1000 - 256 - 256 - 256 = 232
+    // Under the hood, the first 8 least significant bits (LSB) are kept,
+    // while the rest towards the most significant bit (MSB) get truncated.
+    println!("1000 as a u8 is: {}", 1000 as u8);
 }
