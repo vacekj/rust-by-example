@@ -1,6 +1,7 @@
 // Suppress all warnings from casts which overflwo
 #![allow(overflowing_literals)]
-
+/*Important! Rust provides _no implicit_ type coercion. No corecion is good, no implicit type
+coercion is even better ;) */
 pub fn main() {
     let decimal = 65.4321_f32;
 
