@@ -9,6 +9,7 @@ mod ch43_declare_first;
 mod ch44_freezing;
 mod ch4_variable_bindings;
 mod ch51_casting;
+mod ch52_literals;
 
 use ch51_casting::main as realMain;
 
