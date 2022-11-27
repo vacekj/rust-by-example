@@ -19,4 +19,8 @@ fn main() {
 
     let num = Number::from(30);
     println!("My number is {:?}", num);
+
+    let int = 5;
+    let into_num: Number = int.into();
+    println!("My number is {:?}", num);
 }
