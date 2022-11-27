@@ -13,6 +13,7 @@ mod ch52_literals;
 mod ch53_inference;
 mod ch54_aliases;
 mod ch61_from_into;
+mod ch63_to_from_strings;
 mod ch6_conversion;
 
 use ch51_casting::main as realMain;
