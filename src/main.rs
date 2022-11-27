@@ -11,6 +11,7 @@ mod ch4_variable_bindings;
 mod ch51_casting;
 mod ch52_literals;
 mod ch53_inference;
+mod ch54_aliases;
 
 use ch51_casting::main as realMain;
 
