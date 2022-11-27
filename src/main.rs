@@ -12,6 +12,7 @@ mod ch51_casting;
 mod ch52_literals;
 mod ch53_inference;
 mod ch54_aliases;
+mod ch6_conversion;
 
 use ch51_casting::main as realMain;
 
