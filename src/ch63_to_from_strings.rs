@@ -16,4 +16,8 @@ fn main() {
     // or, better yet, a fmt::Display trait
     let circle = Circle { radius: 10 };
     println!("{}", circle.to_string());
+
+    // parsing a string
+    let parsed: i32 = "5".parse().unwrap();
+    let turbo_parsed = "10".parse::<i32>().unwrap();
 }
