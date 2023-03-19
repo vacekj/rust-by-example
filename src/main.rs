@@ -17,6 +17,7 @@ mod ch63_to_from_strings;
 mod ch6_conversion;
 mod ch822_returning_values_from_loops;
 mod ch840_for_and_range;
+mod ch851_match_destructuring;
 
 use ch51_casting::main as realMain;
 
