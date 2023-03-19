@@ -13,3 +13,18 @@ fn main() {
         _ => println!("dgaf"),
     }
 }
+
+// # arrays/slices
+
+fn array() {
+    let array = [3, -2, 6];
+
+    match array {
+        [3, second, tail @ ..] => println!(
+            "first, second, other elements were:\
+        {:?}",
+            tail
+        ),
+        _ => (),
+    }
+}
