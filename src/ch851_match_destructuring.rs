@@ -28,3 +28,21 @@ fn array() {
         _ => (),
     }
 }
+
+// need to distinguish between destructuring and dereferencing = completely different concepts
+
+fn pointersref() {
+    let reference = &4;
+
+    match reference {
+        &val => println!("Got a value via destructuring: {:?}", val),
+    }
+
+    match *reference {
+        val => println!("got a value via dereferencing: "),
+    }
+
+    let _not_a_reference = 3;
+
+    let ref _is_a_reference = 4;
+}
