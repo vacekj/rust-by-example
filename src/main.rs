@@ -18,6 +18,7 @@ mod ch6_conversion;
 mod ch822_returning_values_from_loops;
 mod ch840_for_and_range;
 mod ch851_match_destructuring;
+mod ch852_binding;
 mod ch852_guards;
 
 use ch51_casting::main as realMain;
