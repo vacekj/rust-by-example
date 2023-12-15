@@ -22,6 +22,7 @@ mod ch852_binding;
 mod ch852_guards;
 mod ch87_let_else;
 mod ch9_functions;
+mod tryout;
 
 use ch51_casting::main as realMain;
 
