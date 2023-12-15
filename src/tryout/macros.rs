@@ -56,7 +56,11 @@ mod tests {
     }
 
     #[test]
-    fn invalid_expr() {}
+    fn invalid_expr() {
+        /* this won't compile, because any compilation error that happens in the expanded macro
+        gets propagated to the calling code*/
+        // let v: Vec<usize> = vek!(42, "hello");
+    }
 
     #[test]
     fn with_capacity() {
