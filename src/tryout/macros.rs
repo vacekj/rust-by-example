@@ -11,6 +11,14 @@ macro_rules! vek {
         $(vs.push($element);)*
         vs
     }};
+    ( $element:expr; $count:expr) => {{
+        let mut vs = Vec::new();
+        let x = $element;
+        for _ in 0..$count {
+            vs.push(x.clone());
+        }
+        vs
+    }}
 }
 
 #[cfg(test)]
@@ -45,5 +53,13 @@ mod tests {
     fn trailing() {
         let x: Vec<u32> = vek![1, 2, 3, 4,,,,,,,,];
         assert_eq!(x.len(), 4);
+    }
+
+    #[test]
+    fn invalid_expr() {}
+
+    #[test]
+    fn with_capacity() {
+        let v: Vec<usize> = vek!(42, 5);
     }
 }
