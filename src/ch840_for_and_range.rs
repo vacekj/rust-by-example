@@ -38,7 +38,7 @@ fn into_iter() {
 // iter_mut() - mutably borrows, allows collection to be modified in place
 
 fn iter_mut() {
-    let names = vec!["Box", "Frank", "Ferris"];
+    let mut names = vec!["Box", "Frank", "Ferris"];
 
     for name in names.iter_mut() {
         match name {

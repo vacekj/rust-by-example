@@ -2,7 +2,7 @@ use std::fmt;
 use std::fmt::Formatter;
 
 struct Circle {
-    radius: u32;
+    radius: u32,
 }
 
 impl fmt::Display for Circle {
