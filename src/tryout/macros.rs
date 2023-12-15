@@ -3,8 +3,8 @@
 fn new_vec() {}
 
 macro_rules! vek {
-    ($elem:literal, $ty:ty) => {
-        Vec::with_capacity($elem) as Vec<$ty>;
+    () => {
+        Vec::new()
     };
 }
 
@@ -14,6 +14,6 @@ mod tests {
 
     #[test]
     fn vek() {
-        let a = vek![1, u64];
+        let a = vek!();
     }
 }
