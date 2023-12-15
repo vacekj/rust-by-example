@@ -43,7 +43,7 @@ mod tests {
 
     #[test]
     fn trailing() {
-        let x: Vec<u32> = vek![1, 2, 3, 4,];
+        let x: Vec<u32> = vek![1, 2, 3, 4,,,,,,,,];
         assert_eq!(x.len(), 4);
     }
 }
