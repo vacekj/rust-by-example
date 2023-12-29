@@ -62,6 +62,11 @@ mod tests {
         // let v: Vec<usize> = vek!(42, "hello");
     }
 
+    /// ```compile_fail
+    /// let v: Vec<usize> = vek!(42, "hello");
+    /// ```
+    struct CompileFailtest;
+
     #[test]
     fn with_capacity() {
         let v: Vec<usize> = vek!(42, 5);
