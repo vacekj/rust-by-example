@@ -12,11 +12,9 @@ macro_rules! vek {
         vs
     }};
     ( $element:expr; $count:expr) => {{
-        let mut vs = Vec::new();
-        let x = $element;
-        for _ in 0..$count {
-            vs.push(x.clone());
-        }
+        let count = $count;
+        let mut vs = Vec::with_capacity($count);
+        vs.extend(std::iter::repeat($element).take(count));
         vs
     }}
 }
