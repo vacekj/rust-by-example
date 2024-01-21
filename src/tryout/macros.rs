@@ -2,21 +2,31 @@
 
 fn new_vec() {}
 
+/// A hand-written vec macro for learning purposes
+#[macro_export]
 macro_rules! vek {
-    () => {
-        Vec::new()
-    };
-    ( $($element:expr),+ $(,)* ) => {{
-        let mut vs = Vec::new();
+    ($($element:expr),*) => {{
+        #[allow(unused_mut)]
+        let mut vs = Vec::with_capacity($crate::vek![@COUNT; $($element),*]);
         $(vs.push($element);)*
         vs
     }};
+
+    ($($element:expr,)*) => {{
+       $crate::vek![$($element),*]
+    }};
+
     ( $element:expr; $count:expr) => {{
-        let count = $count;
-        let mut vs = Vec::with_capacity($count);
-        vs.extend(std::iter::repeat($element).take(count));
+        let mut vs = Vec::new();
+        vs.resize($count, $element);
         vs
-    }}
+    }};
+
+    /* Counting in macros is weird */
+    (@COUNT; $($element:expr),*) => {
+        <[()]>::len(&[$($crate::vek![@SUBST; $element]),*])
+    };
+    (@SUBST; $_element:expr) => { () };
 }
 
 #[cfg(test)]
@@ -49,7 +59,7 @@ mod tests {
 
     #[test]
     fn trailing() {
-        let x: Vec<u32> = vek![1, 2, 3, 4,,,,,,,,];
+        let x: Vec<u32> = vek![1, 2, 3, 4,];
         assert_eq!(x.len(), 4);
     }
 

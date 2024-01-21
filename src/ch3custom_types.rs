@@ -54,7 +54,7 @@ pub fn main() {
 
 #[cfg(test)]
 mod tests {
-    use crate::ch3custom_types::{Point, Rectangle, square};
+    use crate::ch3custom_types::{square, Point, Rectangle};
 
     #[test]
     fn area() {
