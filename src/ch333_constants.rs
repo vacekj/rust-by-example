@@ -19,5 +19,4 @@ fn main() {
     unsafe {
         LANGUAGE = "Go ;)";
     }
-    // FIXME ^ Comment out this line
 }
